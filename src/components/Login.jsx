@@ -17,7 +17,7 @@ const initialForm = {
   terms: false,
 };
 
-const errorMessages = {
+export const errorMessages = {
   email: 'Please enter a valid email address',
   password: 'Password must be at least 4 characters long',
 };
@@ -114,7 +114,7 @@ export default function Login() {
           value={form.email}
           invalid={errors.email}
         />
-        {errors.email && <FormFeedback>{errorMessages.email}</FormFeedback>}
+        {errors.email && <FormFeedback data-cy="errormessages">{errorMessages.email}</FormFeedback>}
       </FormGroup>
       <FormGroup>
         <Label for="examplePassword">Password</Label>
@@ -128,7 +128,7 @@ export default function Login() {
           invalid={errors.password}
         />
         {errors.password && (
-          <FormFeedback>{errorMessages.password}</FormFeedback>
+          <FormFeedback data-cy="errormessages">{errorMessages.password}</FormFeedback>
         )}
       </FormGroup>
       <FormGroup check>

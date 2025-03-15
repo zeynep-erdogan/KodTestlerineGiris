@@ -2,6 +2,7 @@ import { Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Login from './components/login';
+import Main from './components/Main';
 
 function App() {
   
@@ -12,7 +13,7 @@ function App() {
             <Login />
           </Route>
           <Route exact path="/main">
-            <h1>Main Page</h1>
+            <Main />
           </Route>
           <Route exact path="/error">
           <h1>Error Page</h1>
